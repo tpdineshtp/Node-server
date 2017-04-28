@@ -3,8 +3,7 @@
  */
 var express = require('express'),
 	app = express(),
-	morgan = require('morgan'),
-	i18n = require("i18n")
+	morgan = require('morgan')
 
 /**
  * Configuration
@@ -12,11 +11,6 @@ var express = require('express'),
 var port     = process.env.PORT || 3000
 
 app.use(morgan('dev'))
-i18n.configure({
-	locales:['en', 'de'],
-    directory: __dirname + '/locales'
-});
-app.use(i18n.init);
 
 
  /**

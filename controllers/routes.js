@@ -1,6 +1,6 @@
 module.exports = function(app) {
 	
 	app.get('/', function(req, res){
-	    res.send(res.__('hello'));
+	    res.end("Hello Developer");
 	});
 }
