@@ -3,7 +3,8 @@
  */
 var express = require('express'),
 	app = express(),
-	morgan = require('morgan')
+	morgan = require('morgan'),
+	bodyParser = require('body-parser')
 
 /**
  * Configuration
@@ -11,6 +12,7 @@ var express = require('express'),
 var port     = process.env.PORT || 3000
 
 app.use(morgan('dev'))
+app.use(bodyParser.json())
 
 
  /**
